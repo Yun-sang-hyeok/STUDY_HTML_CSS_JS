@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CSS DEMO</title>
+</head>
+<body>
+  <ol>
+    <li id="special">First</li>
+    <li>Second</li>
+  </ol>
+  <h1 id="special">Hello</h1>
+  <button>Button</button>
+  <button>Button</button>
+  <div class="red"></div>
+  <div class="blue"></div>
+  <a href="naver.com">Naver</a>
+  <a href="google.com">Google</a>
+  <a>Empty</a>
+</body>
+</html>
+
+/* selector {
+  property: value;
+} */
+
+* {
+  color: green;
+}
+
+li {
+  color: blue;
+}
+
+li#special {
+  color: pink;
+}
+
+.red {
+  width: 100px;
+  height: 100px;
+  padding: 20px 0px;
+  margin: 20px;
+  border: 2px dashed red;
+  border-width: 2px;
+  border-style: solid;
+  border-color: pink;
+  background: yellow;
+}
+
+button:hover {
+  color: red;
+  background: beige;
+}
+
+a[href$=".com"] {
+  color: purple;
+}
+
+
+------------------------------------------------------------------------------------------------------
+
+
+//display
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <!-- Block level -->
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  
+  <!-- Inline level -->
+  <span>1</span>
+  <span>2</span>
+  <span>3</span>
+  
+</body>
+</html>
+
+div, span{
+  width: 80px;
+  height: 80px;
+  margin: 20px;
+}
+
+div{
+  background: red;
+  display: inline-block;
+}
+
+span {
+  background: Blue;
+  display: block;
+}
+
+------------------------------------------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+ <article class="container">
+  <div></div>
+  <div class="box">I'm Box</div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</body>
+</html>
+
+div, span{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+  background: red;
+}
+
+.container {
+  background: skyblue;
+  left: 20px;
+  top: 20px;
+  position: relative;  //css에서 지정된 default value(static)가 있다.
+}
+
+.box {
+  background: Blue;
+  left: 20px;
+  top: 20px;
+  position: sticky;
+}
+/*position 정리
+relative는 원래 있어야하는 자리에서 상대적으로 이동한다.
+
+absolute는 아이템이 담겨있는 상자안에서 옮겨간다.
+여기서는 article이라는 container에서 20px씩 옮긴 것이다.
+
+fixed는 상자 안에서 완전히 벗어나서 윈도우(웹페이지) 안에서 움직이는 것이다.
+
+sticky는 원래 있어야하는 자리에 있으면서 스크롤을 움직여도 그 자리에 그대로 있다.
+*/
+
+------------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+  <div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+    <div class="item item10">10</div>
+        <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+    <div class="item item7">7</div>
+    <div class="item item8">8</div>
+    <div class="item item9">9</div>
+    <div class="item item10">10</div>
+  </div>
+</body>
+</html>
+
+
+.container {
+  background: beige;
+  height: 80vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
+  /* flex-flow: column nowrap; */
+  
+  justify-content: space-between; /* main axis */
+  align-items: baseline;
+  align-content: space-between;
+}
+
+
+.item {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+.item1 {
+  background: #ef9a9a;
+}
+
+.item2 {
+  background: #f48fb1;
+}
+
+.item3 {
+  background: #ce93d8;
+}
+
+.item4 {
+  background: #b39ddb;
+}
+
+.item5 {
+  background: #90caf9;
+}
+
+.item6 {
+  background: #a5d6a7;
+}
+
+.item7 {
+  background: #e6ee9c;
+}
+
+.item8 {
+  background: #e6ee9c;
+}
+
+.item9 {
+  background: #e6ee9c;
+}
+
+.item10 {
+  background: #e6ee9c;
+}
+
